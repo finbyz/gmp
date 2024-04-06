@@ -13,6 +13,13 @@ app_license = "mit"
 # app_include_css = "/assets/gmp/css/gmp.css"
 # app_include_js = "/assets/gmp/js/gmp.js"
 
+app_include_css = "/assets/gmp/css/gmp_tinymce.css"
+
+app_include_js = [
+    "https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.2.0/tinymce.min.js",
+    "/assets/gmp/js/gmp_tinymce.js"
+]
+
 # include js, css files in header of web template
 # web_include_css = "/assets/gmp/css/gmp.css"
 # web_include_js = "/assets/gmp/js/gmp.js"
@@ -28,7 +35,10 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Quotation" : "public/js/quotation.js",
+    "Sales Order": "public/js/sales_order.js" 
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
