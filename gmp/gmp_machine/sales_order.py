@@ -34,17 +34,17 @@ def table_content(row):
             <p align="center" style="font-size:11px;"><b><u> {0} </u></b></p>
             <p align="justify" style="font-size:11px;"> {1} </p>
                 <table border="1" cellspacing="0" cellpadding="0" width="100%" class="tbspace">
-            <tbody>""".format(row.specification,row.description)
+            <tbody>""".format(row.specification or "",row.description or "")
         return message
     elif row.bold:
         message = """<tr align="left">
                 <td width="35%"><b> {0} </b></td>
                 <td valign="top"><b> {1} </b></td>
-            </tr>""".format(row.specification, row.value)
+            </tr>""".format(row.specification or "", row.value)
         return message
     else:
         message = """<tr align="left">
                 <td width="35%"> {0} </td>
                 <td valign="top"> {1} </td>
-            </tr>""".format(row.specification, row.value)
+            </tr>""".format(row.specification or "", row.value)
         return message
