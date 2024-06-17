@@ -132,13 +132,14 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Quotation": {
+		"validate": "gmp.gmp_machine.doc_event.quotation.validate",
+	},
+    "Sales Order":{
+        "validate": "gmp.gmp_machine.doc_event.sales_order.validate"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

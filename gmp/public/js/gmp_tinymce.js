@@ -46,14 +46,14 @@ frappe.ui.form.ControlTextEditor = class ControlTextEditor extends frappe.ui.for
     }
 
     set_formatted_input(value){
-        if (this.frm && !this.frm.doc.__setContent){
+        if (cur_frm && !cur_frm.doc.__setContent){
             if(value){
                 this.activeEditor.setContent(value)
             }else{
                 this.activeEditor.setContent("")
             }
         }
-        this.frm.doc.__setContent = 1
+        cur_frm.doc.__setContent = 1
 
     }
 }

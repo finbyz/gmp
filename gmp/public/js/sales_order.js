@@ -3,7 +3,7 @@ frappe.ui.form.on("Sales Order", {
 		frm.doc.items.forEach(function (d){
 			if(d.item_code){
 				frappe.call({
-					method: "gmp.gmp_machine.sales_order.get_tech_specs",
+					method: "gmp.gmp_machine.doc_event.sales_order.get_tech_specs",
 					args: {
 						item_code: d.item_code
 					},
